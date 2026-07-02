@@ -18,7 +18,7 @@ def run_tests(test_dir=None):
     if test_dir is None:
         test_dir = os.path.join(project_root, "test", "第一期", "自习SDD-登录功能测试.py")
 
-    results_path = os.path.join(project_root, ".test_results.json")
+    results_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".test_results.json")
 
     env = os.environ.copy()
     env["PYTHONPATH"] = project_root + os.pathsep + env.get("PYTHONPATH", "")

@@ -14,7 +14,7 @@ from flask import Flask, jsonify, render_template_string, request
 app = Flask(__name__)
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-RESULTS_PATH = os.path.join(PROJECT_ROOT, ".test_results.json")
+RESULTS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".test_results.json")
 
 # 存储最后一次的测试结果
 _last_results = None
